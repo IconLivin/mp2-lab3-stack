@@ -108,7 +108,7 @@ namespace Project3 {
 		String^ str = textBox1->Text;
 		int i;
 		i = Convert::ToInt32(str);
-		i++;
+		i+=2;
 		label1->Text = Convert::ToString(i);
 	}
 	private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
