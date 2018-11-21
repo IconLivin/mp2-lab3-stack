@@ -42,7 +42,7 @@ TStack <T> &TStack <T> ::operator= (const TStack &tmp)
 {
 	if (MaxSize != tmp.MaxSize)
 	{
-		delete[] Stack;
+		delete[] mas;
 		mas = new T[tmp.MaxSize];
 	}
 	MaxSize = tmp.MaxSize;
