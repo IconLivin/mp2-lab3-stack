@@ -25,7 +25,14 @@ bool Check(string str)
 
 void main()
 {
-	string str = "He(((llo)wor)ld))";
-	cout << Check(str) << endl;
+	TStack<int> k(3);
+	k.Push(1);
+	k.Push(2);
+	k.Push(3);
+	cout << k.Top() << endl;
+	k.Pop();
+	cout << k.Top() << endl;
+	k.Pop();
+	cout << k.Top() << endl;
 	system("pause");
 }

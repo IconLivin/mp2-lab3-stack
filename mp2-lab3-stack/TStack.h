@@ -16,6 +16,7 @@ public:
 	T Top()const;
 	bool IsEmpty()const;
 	bool IsFull()const;
+	void clear();
 };
 
 template <class T>
@@ -89,4 +90,9 @@ template <class T>
 bool TStack<T>::IsFull()const
 {
 	return (Size == MaxSize);
+}
+
+template <class T>
+void TStack<T>::clear() {
+	Size = 0;
 }
