@@ -11,8 +11,7 @@ class TCalc {
 	int GetPriority(char m);
 public:
 	void ToPostFix();
-	void ToInfix(string inf);
-	void SetInfix(string s);
+	void SetInfix();
 	string GetPostfix();
 	double Calc();
 };

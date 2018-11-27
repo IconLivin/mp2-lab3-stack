@@ -1,4 +1,6 @@
 #include "TCalc.h"
+#include <iostream>
+#include <string>
 
 int TCalc::GetPriority(char m) {
 	switch (m)
@@ -31,14 +33,21 @@ void TCalc::ToPostFix() {
 			while (GetPriority(tmp[i]) <= GetPriority(stop.Top()))postfix += stop.Pop();
 			stop.Push(tmp[i]);
 		}
+		else
+			throw - 1;
 	}
 }
 
-void TCalc::SetInfix(const string s) {
-	this->infix = s;
+void TCalc::SetInfix() {
+	string c;
+	std::cin >> c;
+	if (c.size() > 10)
+		throw - 1;
+	infix = c;
 }
 
 string TCalc::GetPostfix() {
+	this->ToPostFix();
 	return postfix;
 }
 
