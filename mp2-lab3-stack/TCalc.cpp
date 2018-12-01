@@ -1,6 +1,7 @@
 #include "TCalc.h"
 #include <iostream>
 #include <string>
+#include <cmath>
 using namespace std;
 
 int TCalc::GetPriority(char m) {
