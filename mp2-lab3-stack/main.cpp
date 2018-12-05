@@ -25,9 +25,9 @@ bool Check(string str)
 }
 
 void main()
-{
+ {
 	TCalc tcal;
-	string exp = "2+2*2-4/2";
+	string exp = "cos0";
 	tcal.SetInfix(exp);
 	cout << tcal.GetPostfix() << endl;;
 	cout << tcal.Calc() << endl;

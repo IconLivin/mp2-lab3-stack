@@ -35,6 +35,12 @@ void TCalc::ToPostFix() {
 			while (GetPriority(tmp[i]) <= GetPriority(stop.Top()))postfix += stop.Pop();
 			stop.Push(tmp[i]);
 		}
+		if (tmp[i] == 's' || tmp[i] == 'c')
+		{
+			postfix += ' ';
+			postfix += tmp[i];
+			i += 2;
+		}
 	}
 }
 
@@ -51,7 +57,7 @@ double TCalc::Calc() {
 	double num1, num2, res;
 	stnum.clear();
 	for (int i = 0; i < postfix.size(); i++) {
-		if (postfix[i] == '+' || postfix[i] == '-' || postfix[i] == '*' || postfix[i] == '/' || postfix[i] == '^') {
+		if (postfix[i] == '+' || postfix[i] == '-' || postfix[i] == '*' || postfix[i] == '/' || postfix[i] == '^'||postfix[i]=='s'||postfix[i]=='c'){
 			num2 = stnum.Pop();
 			num1 = stnum.Pop();
 			switch (postfix[i])
@@ -65,6 +71,10 @@ double TCalc::Calc() {
 			case '/':res = num1 / num2;
 				break;
 			case '^':res = pow(num1, num2);
+				break;
+			case 's':res = sin(num2);
+				break;
+			case 'c':res = cos(num2);
 				break;
 			}
 			stnum.Push(res);
