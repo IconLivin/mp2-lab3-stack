@@ -82,6 +82,8 @@ namespace Project3 {
 			// 
 			// textBox1
 			// 
+			this->textBox1->Font = (gcnew System::Drawing::Font(L"MV Boli", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->textBox1->Location = System::Drawing::Point(12, 28);
 			this->textBox1->Multiline = true;
 			this->textBox1->Name = L"textBox1";
@@ -92,9 +94,11 @@ namespace Project3 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"MV Boli", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(443, 36);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(34, 13);
+			this->label1->Size = System::Drawing::Size(53, 21);
 			this->label1->TabIndex = 4;
 			this->label1->Text = L"Solve";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
@@ -103,7 +107,7 @@ namespace Project3 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(596, 192);
+			this->ClientSize = System::Drawing::Size(569, 128);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button1);
@@ -124,7 +128,7 @@ namespace Project3 {
 		calc.SetInfix(infix);
 		calc.ToPostFix();
 		double res = calc.Calc();
-		textBox1->Text = Convert::ToString(res);
+		label1->Text = Convert::ToString(res);
 		}
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
