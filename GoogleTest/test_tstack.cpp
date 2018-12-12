@@ -81,4 +81,5 @@ TEST(TStack, can_clear_stack)
 	TS.clear();
 
 	ASSERT_TRUE(TS.IsEmpty());
+	system("pause");
 }
